@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body, html, .container {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    text-decoration: underline;
+    color: #009fc6; }
+
+p {
+  font-family: 'Lato'; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Bebas Neue Bold';
+  color: #6b6c6d; }
+
+.section {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .section h1 {
+    padding: 20px; }
+
+.hero {
+  background-color: #f2f2f2; }
+  .hero img {
+    margin-top: -100px;
+    margin-bottom: -70px; }
+
+.work {
+  height: auto;
+  min-height: 100%; }
+  .work .gallery-container {
+    height: 100%;
+    flex-basis: auto;
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .work .gallery-container h4, .work .gallery-container h3 {
+      padding: 15px; }
+    .work .gallery-container .gallery-thumbnail {
+      border-radius: 2px;
+      border: 1px solid #6b6c6d;
+      width: 400px;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      .work .gallery-container .gallery-thumbnail img {
+        width: 300px;
+        max-width: 100%;
+        margin: auto; }
+
+.navigation {
+  height: 100px;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
+  .navigation ul {
+    display: flex;
+    font-family: 'Bebas Neue Bold';
+    justify-content: space-around; }
+    .navigation ul li {
+      list-style-type: none;
+      padding: 20px; }
+
+.about {
+  background-color: #f2f2f2; }
+
+p.about-copy {
+  padding-bottom: 20px; }
+
+.footer {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .footer p {
+    font-size: 12px;
+    padding: 10px; }
+  .footer ul {
+    display: flex;
+    justify-content: center; }
+    .footer ul li {
+      list-style-type: none;
+      padding: 10px; }
+
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url("../fonts/BebasNeueBold.ttf"); }
+
+/*# sourceMappingURL=styles.css.map */

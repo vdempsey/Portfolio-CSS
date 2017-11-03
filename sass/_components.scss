@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, .container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+    color: $blue;
+  }
+}
+
+p {
+  font-family: 'Lato';
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Bebas Neue Bold';
+  color: $grey;
+}
+
+
+.section {
+  overflow: auto;
+  h1 {
+    padding: 20px;
+  }
+  width: 100%;
+  height: 100%;
+  // padding-top: 80px;
+  // padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.hero {
+  background-color: $light-grey;
+  img {
+    margin-top: -100px;
+    margin-bottom: -70px;
+  }
+}
+
+.work {
+  height: auto;
+  min-height: 100%;
+  // background-color: $light-grey;
+  // overflow: auto;
+  .gallery-container {
+    h4, h3 {
+      padding: 15px;
+    }
+    height: 100%;
+    flex-basis: auto;
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    // background-color: $light-grey;
+    .gallery-thumbnail {
+      border-radius: 2px;
+      border: 1px solid $grey;
+      width: 400px;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        width: 300px;
+        max-width: 100%;
+        margin: auto;
+      }
+
+    }
+  }
+}
+
+.navigation {
+  height: 100px;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  ul {
+    display: flex;
+    font-family: 'Bebas Neue Bold';
+    justify-content: space-around;
+    // background-color: rgba(255, 255, 255, 0.8);
+    li {
+      list-style-type: none;
+      padding: 20px;
+    }
+  }
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+}
+
+.about,
+.contact {
+
+}
+
+.about {
+  background-color: $light-grey;
+}
+
+p.about-copy {
+  padding-bottom: 20px;
+}
+
+.footer {
+  height: 70px;
+  p {
+    font-size: 12px;
+    padding: 10px;
+  }
+  position: fixed;
+  // z-index: 1;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      list-style-type: none;
+      padding: 10px;
+    }
+  }
+
+}
