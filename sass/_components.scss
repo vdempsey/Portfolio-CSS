@@ -36,7 +36,8 @@ h1, h2, h3, h4, h5 {
 
 
 .section {
-  overflow: auto;
+  height: 100%;
+  // overflow: auto;
   h1 {
     padding: 20px;
   }
@@ -50,7 +51,9 @@ h1, h2, h3, h4, h5 {
   align-items: center;
 }
 
-
+.see-all {
+  width: 100%;
+}
 
 .hero {
   // background-color: $light-grey;
@@ -68,35 +71,17 @@ h1, h2, h3, h4, h5 {
 
 .work {
   height: 100%;
-
-  // min-height: 100%;
-  // background-color: $light-grey;
-  // overflow: auto;
-  // margin-top: 100px;
-  // margin-bottom: 70px;
   .gallery-container {
     text-align: center;
-    // h4, h3 {
-    //   padding: 15px;
-    // }
-    // margin-top: 100px;
-    // margin-bottom: 70px;
-    // height: calc(100% - 170px);
     flex-basis: auto;
-    // overflow: auto;
     width: 100%;
     height: 400px;
-    // max-height: 600px;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     .gallery-thumbnail {
       width: calc(100% / 3);
-      // height: 50vh;
-      // border-radius: 1px;
-      // border: 1px solid white;
       min-width: 250px;
       display: flex;
       flex-direction: column;
@@ -104,17 +89,16 @@ h1, h2, h3, h4, h5 {
       padding: 20px;
       flex-grow: 1;
       align-items: center;
-      // transition: background-color 3s ease-in-out;
-      // img {
-      //   width: 300px;
-      //   max-width: 100%;
-      //   margin: auto;
-      // }
       &:first-child {
         background-color: rgba(64, 65, 66, 0.95);
         h3 { color: white;}
         .carrot {
           font-size: 40px;
+        }
+        .see-all {
+          z-index: 3;
+          max-width: 300px;
+          display: none;
         }
         transition: transform 3s ease-in-out;
         &:hover {
@@ -122,15 +106,18 @@ h1, h2, h3, h4, h5 {
           -webkit-transition: background-color 400ms;
           -ms-transition: background-color 400ms;
           transition: background-color 400ms;
-          // background-image: url('../img/v.dempsey-logo.png');
-          // background-size: 100%;
-          // background-repeat: no-repeat;
+          & .see-all {
+            display: block;
+            padding-top: 20px;
+          }
           h3 {
             transform: scale(1.7);
           }
-          &::after {
+          & .see-all::before {
             content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
             max-width: 300px;
+            color: white;
+            font-family: 'Lato';
 
           }
         }
@@ -138,20 +125,70 @@ h1, h2, h3, h4, h5 {
       &:nth-child(2) {
         background-color: rgba(64, 65, 66, 0.95);
         h3 { color: white;}
+        transition: transform 3s ease-in-out;
         &:hover {
           background-color: $blue;
+          -webkit-transition: background-color 400ms;
+          -ms-transition: background-color 400ms;
+          transition: background-color 400ms;
+          h3 {
+            transform: scale(1.7);
+          }
+          &::after {
+            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+            max-width: 300px;
+            color: white;
+            font-family: 'Lato';
+            padding-top: 15px;
+
+          }
         }
       }
       &:nth-child(3) {
         background-color: rgba(64, 65, 66, 0.95);
         h3 { color: white;}
+        transition: transform 3s ease-in-out;
         &:hover {
           background-color: $blue;
+          -webkit-transition: background-color 400ms;
+          -ms-transition: background-color 400ms;
+          transition: background-color 400ms;
+          h3 {
+            transform: scale(1.7);
+          }
+          &::after {
+            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+            max-width: 300px;
+            color: white;
+            font-family: 'Lato';
+            padding-top: 15px;
+
+          }
         }
       }
 
     }
   }
+}
+
+#projects-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-self: center;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  height: 100%;
+
+}
+
+.projects-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 600px;
 }
 
 .navigation {
