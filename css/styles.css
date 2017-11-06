@@ -6,11 +6,6 @@
   padding: 0;
   box-sizing: border-box; }
 
-body, html, .container {
-  margin: 0;
-  padding: 0;
-  height: 100%; }
-
 a {
   text-decoration: none;
   color: inherit; }
@@ -18,12 +13,8 @@ a {
     text-decoration: underline;
     color: #009fc6; }
 
-p {
-  font-family: 'Lato'; }
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Bebas Neue Bold';
-  color: #6b6c6d; }
+body, html, .container {
+  height: 100%; }
 
 .section {
   height: 100%;
@@ -50,107 +41,109 @@ h1, h2, h3, h4, h5 {
   height: 100%; }
   .work .gallery-container {
     text-align: center;
-    flex-basis: auto;
     width: 100%;
     height: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: center;
+    flex-basis: auto; }
     .work .gallery-container .gallery-thumbnail {
       width: calc(100% / 3);
+      z-index: 3;
       min-width: 250px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 20px;
       flex-grow: 1;
-      align-items: center; }
-      .work .gallery-container .gallery-thumbnail:first-child {
-        background-color: rgba(64, 65, 66, 0.95);
-        transition: transform 3s ease-in-out; }
-        .work .gallery-container .gallery-thumbnail:first-child h3 {
-          color: white; }
-        .work .gallery-container .gallery-thumbnail:first-child .carrot {
-          font-size: 40px; }
-        .work .gallery-container .gallery-thumbnail:first-child .see-all {
-          z-index: 3;
+      align-items: center;
+      background-color: rgba(64, 65, 66, 0.95);
+      transition: transform 3s ease-in-out; }
+      .work .gallery-container .gallery-thumbnail h3 {
+        color: white; }
+      .work .gallery-container .gallery-thumbnail .see-all {
+        z-index: 3;
+        max-width: 300px;
+        display: none; }
+        .work .gallery-container .gallery-thumbnail .see-all a {
+          color: white;
+          font-weight: bold;
+          background-color: black;
+          padding: 10px;
+          display: block;
+          width: 100px;
+          margin: 20px auto; }
+          .work .gallery-container .gallery-thumbnail .see-all a:hover {
+            color: #009fc6; }
+      .work .gallery-container .gallery-thumbnail:hover {
+        background-color: #009fc6;
+        background-image: url("../img/html-screenshot1.png");
+        -webkit-transition: background-color 400ms;
+        -ms-transition: background-color 400ms;
+        transition: background-color 400ms; }
+        .work .gallery-container .gallery-thumbnail:hover .see-all {
+          display: block;
+          padding-top: 20px; }
+        .work .gallery-container .gallery-thumbnail:hover h3 {
+          transform: scale(1.7); }
+        .work .gallery-container .gallery-thumbnail:hover:first-child .see-all::before {
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
           max-width: 300px;
-          display: none; }
-        .work .gallery-container .gallery-thumbnail:first-child:hover {
-          background-color: #009fc6;
-          -webkit-transition: background-color 400ms;
-          -ms-transition: background-color 400ms;
-          transition: background-color 400ms; }
-          .work .gallery-container .gallery-thumbnail:first-child:hover .see-all {
-            display: block;
-            padding-top: 20px; }
-          .work .gallery-container .gallery-thumbnail:first-child:hover h3 {
-            transform: scale(1.7); }
-          .work .gallery-container .gallery-thumbnail:first-child:hover .see-all::before {
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-            max-width: 300px;
-            color: white;
-            font-family: 'Lato'; }
+          color: white;
+          font-family: 'Lato'; }
       .work .gallery-container .gallery-thumbnail:nth-child(2) {
-        background-color: rgba(64, 65, 66, 0.95);
-        transition: transform 3s ease-in-out; }
-        .work .gallery-container .gallery-thumbnail:nth-child(2) h3 {
+        background-image: none; }
+        .work .gallery-container .gallery-thumbnail:nth-child(2):hover .see-all::before {
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
           color: white; }
-        .work .gallery-container .gallery-thumbnail:nth-child(2):hover {
-          background-color: #009fc6;
-          -webkit-transition: background-color 400ms;
-          -ms-transition: background-color 400ms;
-          transition: background-color 400ms; }
-          .work .gallery-container .gallery-thumbnail:nth-child(2):hover h3 {
-            transform: scale(1.7); }
-          .work .gallery-container .gallery-thumbnail:nth-child(2):hover::after {
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-            max-width: 300px;
-            color: white;
-            font-family: 'Lato';
-            padding-top: 15px; }
       .work .gallery-container .gallery-thumbnail:nth-child(3) {
-        background-color: rgba(64, 65, 66, 0.95);
-        transition: transform 3s ease-in-out; }
-        .work .gallery-container .gallery-thumbnail:nth-child(3) h3 {
+        background-image: none; }
+        .work .gallery-container .gallery-thumbnail:nth-child(3):hover .see-all::before {
+          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
           color: white; }
-        .work .gallery-container .gallery-thumbnail:nth-child(3):hover {
-          background-color: #009fc6;
-          -webkit-transition: background-color 400ms;
-          -ms-transition: background-color 400ms;
-          transition: background-color 400ms; }
-          .work .gallery-container .gallery-thumbnail:nth-child(3):hover h3 {
-            transform: scale(1.7); }
-          .work .gallery-container .gallery-thumbnail:nth-child(3):hover::after {
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-            max-width: 300px;
-            color: white;
-            font-family: 'Lato';
-            padding-top: 15px; }
 
 #projects-one {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 100px;
   padding-bottom: 70px;
-  height: 100%; }
+  height: auto;
+  min-height: 100%; }
 
 .projects-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  min-height: 600px; }
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .projects-container .project-thumbn {
+    border: 1px solid #6b6c6d;
+    margin: 10px;
+    padding: 0 0 10px 0;
+    text-align: center;
+    background-color: #404142;
+    color: white;
+    z-index: 4; }
+    .projects-container .project-thumbn p {
+      padding: 10px; }
+  .projects-container img {
+    width: auto;
+    max-width: 300px; }
 
 .navigation {
   height: 100px;
   top: 0;
+  z-index: 1;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   width: 100%;
   z-index: 1; }
@@ -177,6 +170,7 @@ p.about-copy {
 .footer {
   height: 70px;
   position: fixed;
+  z-index: 1;
   width: 100%;
   bottom: 0;
   display: flex;
@@ -191,7 +185,11 @@ p.about-copy {
     justify-content: center; }
     .footer ul li {
       list-style-type: none;
+      font-size: 14px;
       padding: 10px; }
+      .footer ul li:last-child {
+        font-family: 'Lato';
+        font-size: 10px; }
 
 @media screen and (max-width: 779px) {
   .hero {
@@ -199,5 +197,11 @@ p.about-copy {
 @font-face {
   font-family: 'Bebas Neue Bold';
   src: url("../fonts/BebasNeueBold.ttf"); }
+p {
+  font-family: 'Lato'; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Bebas Neue Bold';
+  color: #6b6c6d; }
 
 /*# sourceMappingURL=styles.css.map */
